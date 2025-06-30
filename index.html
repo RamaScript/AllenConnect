@@ -1,138 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 8px;
-            width: 100%;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-    </style>
-</head>
-<body>
-    <div class="gallery">
-        <img src="img/IMG-20250410-WA0032.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0031.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0030.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0029.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0028.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0027.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0026.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0025.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0024.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0023.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0022.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0021.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0020.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0019.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0018.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0017.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0016.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0015.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0014.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0013.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0012.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0011.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0010.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0009.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0008.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0007.jpg" alt="Image">
-        <img src="img/IMG-20250410-WA0006.jpg" alt="Image">
-    </div>
-    <span>Slide 1: Title Slide
-        Title: AllenConnect
-        Subtitle:
-        Bridging Students, Alumni & Professors
-        Presented by: Ramanand Kumar – BCA 3rd Year
-        Event: Tech Expo 2025
-        
-        Slide 2: Problem Statement
-        Lack of structured communication between students, alumni, and professors
-        
-        Missed opportunities for mentorship and networking
-        
-        No centralized platform for the Allenhouse community
-        
-        Slide 3: Our Solution
-        AllenConnect is a unified Android app designed to connect the Allenhouse community
-        
-        Role-based login for Professors, Alumni, and Students
-        
-        Real-time interaction & personalized dashboards
-        
-        Slide 4: Key Features
-        🔐 Role-Based Login System
-        
-        📰 News Feed (Updates, Announcements)
-        
-        💬 Real-Time Chat
-        
-        🙍‍♂️ Profile Management
-        
-        🔧 Firebase Authentication & Realtime Database
-        
-        Slide 5: User Roles
-        👨‍🏫 Professors: Share updates, engage with students
-        
-        🎓 Alumni: Share industry experience, offer mentorship
-        
-        👨‍🎓 Students: Stay updated, connect with mentors
-        
-        Slide 6: Tech Stack
-        Android Studio (Java & XML)
-        
-        Firebase: Authentication + Realtime DB
-        
-        GitHub for Version Control
-        
-        Custom UI & UX design
-        
-        Slide 7: Future Scope
-        Group Chats & File Sharing
-        
-        Push Notifications
-        
-        Resume Builder for Students
-        
-        Alumni Directory
-        
-        Web Version
-        
-        Slide 8: Impact
-        Stronger Allenhouse Community
-        
-        Better student-alumni-professor collaboration
-        
-        Fostering Mentorship and Career Growth
-        
-        Slide 9: Thank You
-        Presented by: Ramanand Kumar
-        Course: BCA 3rd Year
-        College: Allenhouse Business School
-        📩 Contact: [Your Email or LinkedIn QR]
-        
-        Bonus: Screenshots 📱
-        You can insert these in extra slides like:
-        
-        Slide Title: App Interface – Student View
-        Then add: Login Screen, Feed, Chat, Profile screen, etc.
-        
-    </span>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allen Connect</title>
+    <link rel="icon" href="Res/img/logo/agoi-circle.png" />
+    <link rel="stylesheet" href="Res/CSS/var.css" />
+    <link rel="stylesheet" href="Res/CSS/common.css" />
+    <link rel="stylesheet" href="Res/CSS/header.css" />
+    <link rel="stylesheet" href="Res/CSS/main.css" />
+    <link rel="stylesheet" href="Res/CSS/footer.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- <img src="Res/img/logo/AGOI-Logo.png" alt="Logo" class="logo" /> -->
+        <h1>Allen Connect</h1>
+        <ul>
+          <a href="#home"> <li>Home</li></a>
+          <a href="#about-us"> <li>About Us</li></a>
+          <a href="#hire-me"> <li>Hire me</li></a>
+          <a href="#app-screens"> <li>App Screens</li></a>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- <div class="gallery">
+        <img src="Res/img/IMG-20250410-WA0032.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0031.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0030.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0029.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0028.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0027.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0026.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0025.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0024.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0023.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0022.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0021.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0020.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0019.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0018.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0017.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0016.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0015.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0014.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0013.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0012.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0011.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0010.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0009.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0008.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0007.jpg" alt="Image" />
+        <img src="Res/img/IMG-20250410-WA0006.jpg" alt="Image" />
+      </div> -->
+
+      <section class="home" id="home">
+        <div class="left">
+          <img src="Res/img/IMG-20250410-WA0032.jpg" alt="" />
+        </div>
+        <div class="right">
+          <h1>Allen Connect</h1>
+          <p>
+            This is a Closed Network Community App for <b>Students</b>,
+            <b>Alumni</b>
+            and <b>Professors</b> of Allenhouse Campus.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-us" id="about-us">
+        <div class="section-header">
+          <h2>About Us</h2>
+        </div>
+      </section>
+
+      <section class="app-screens" id="app-screens">
+        <div class="section-header">
+          <h2>App Screens</h2>
+        </div>
+      </section>
+
+      <section class="hire-me" id="hire-me">
+        <div class="section-header">
+          <h2>Hire Me</h2>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+
+    </footer>
+  </body>
 </html>

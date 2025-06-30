@@ -1,0 +1,62 @@
+header {
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    to right,
+    var(--glass-primary),
+    var(--glass-secondary)
+  );
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(var(--blur-amount-safari)); /* for Safari */
+  border: 1px solid var(--glass-border);
+  z-index: 1000;
+  box-shadow: var(--glass-shadow);
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+header nav h1 {
+  font-size: 2rem;
+  margin-left: 0.75rem;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul a {
+  text-decoration: none;
+}
+
+header nav ul a li {
+  margin: 1.5rem;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  color: var(--text-main);
+  border-top: 0.25rem dotted transparent;
+  border-bottom: 0.25rem dotted transparent; /* define width, style, color initially */
+  transition: 0.3s;
+}
+
+header nav ul a li:hover {
+  cursor: pointer;
+  border-bottom-color: var(--text-secondary); /* change only color on hover */
+  transition: 0.3s;
+  color: var(--text-secondary);
+}
