@@ -6,8 +6,7 @@
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
-
+::-webkit-scrollbar {
   width: 0;
 }
 
@@ -20,11 +19,11 @@ body {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section-header {
-  padding-top: rem;
+  padding-top: 6rem;
   display: flex;
   justify-content: center;
 }
@@ -32,9 +31,53 @@ section {
 .section-header h2 {
   font-size: 2rem;
   padding: 0.5rem 8rem;
-font-weight: 500;
-width: fit-content;
-  background-color: var(--glass-secondary);
+  font-weight: 500;
+  width: fit-content;
+  /* background-color: var(--glass-secondary); */
+  background: linear-gradient(
+    to right,
+    var(--glass-primary),
+    var(--glass-secondary),
+    var(--glass-secondary)
+  );
   border-radius: 1rem;
   text-align: center;
+}
+
+b {
+  color: var(--color-secondary);
+  font-weight: normal;
+}
+
+.btn {
+  background: linear-gradient(
+    to right,
+    var(--glass-primary),
+    var(--glass-secondary),
+    var(--glass-primary)
+  );
+  background-size: 200% auto; /* make background twice as wide horizontally */
+  background-position: left center; /* start from left */
+  color: white;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem;
+  border: 0px;
+  border-radius: var(--btn-radius);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.5s ease;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  transition: 0.3s;
+  background-position: right center; /* animate to right on hover */
+  box-shadow: 0px 0px 12px 1px var(--color-primary);
+  transform: scale(0.9);
+}
+
+.btn:focus {
+  outline: 1px solid var(--glass-primary);
+  outline-offset: 1px;
 }

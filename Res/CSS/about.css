@@ -1,0 +1,23 @@
+.about .section-content{
+    padding: 2rem 4rem;
+}
+
+.about .section-content p{
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+.about .section-content ul {
+    padding: 2rem 2rem;
+}
+
+.about .section-content ul li{
+    font-size: 2rem;
+    color: white;
+    margin: 1rem;
+}
+
+.about .section-content ul li::marker{
+    font-size: 2rem;
+    color: var(--color-secondary);
+}

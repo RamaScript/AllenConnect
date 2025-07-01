@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="Res/CSS/header.css" />
     <link rel="stylesheet" href="Res/CSS/main.css" />
     <link rel="stylesheet" href="Res/CSS/footer.css" />
+    <link rel="stylesheet" href="Res/CSS/about.css" />
+    <link rel="stylesheet" href="Res/CSS/app_screens.css" />
   </head>
   <body>
     <header>
@@ -18,67 +20,91 @@
         <h1>Allen Connect</h1>
         <ul>
           <a href="#home"> <li>Home</li></a>
-          <a href="#about-us"> <li>About Us</li></a>
-          <a href="#hire-me"> <li>Hire me</li></a>
+          <a href="#about"> <li>About</li></a>
+          
           <a href="#app-screens"> <li>App Screens</li></a>
+          <a href="#hire-me"> <li>Hire me</li></a>
         </ul>
       </nav>
     </header>
 
     <main>
-      <!-- <div class="gallery">
-        <img src="Res/img/IMG-20250410-WA0032.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0031.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0030.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0029.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0028.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0027.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0026.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0025.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0024.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0023.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0022.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0021.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0020.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0019.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0018.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0017.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0016.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0015.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0014.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0013.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0012.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0011.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0010.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0009.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0008.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0007.jpg" alt="Image" />
-        <img src="Res/img/IMG-20250410-WA0006.jpg" alt="Image" />
-      </div> -->
-
       <section class="home" id="home">
         <div class="left">
-          <img src="Res/img/IMG-20250410-WA0032.jpg" alt="" />
+          <img src="Res/img/splash.jpg" alt="" />
         </div>
         <div class="right">
           <h1>Allen Connect</h1>
+
           <p>
-            This is a Closed Network Community App for <b>Students</b>,
-            <b>Alumni</b>
-            and <b>Professors</b> of Allenhouse Campus.
+            AllenConnect brings <b>Students</b>, <b>Alumni</b>, and
+            <b>Professors</b> of Allenhouse under one digital roof —
+            <b>to share knowledge, opportunities, and memories.</b>
           </p>
+
+          <div class="home-btns">
+            <button class="download-app-btn btn">Download App</button>
+            <a href="https://ramascript.github.io/" target="_blank"
+              ><button class="meet-the-dev-btn btn">Meet Dev.</button></a
+            >
+          </div>
         </div>
       </section>
 
-      <section class="about-us" id="about-us">
+      <section class="about" id="about">
         <div class="section-header">
-          <h2>About Us</h2>
+          <h2>About</h2>
+        </div>
+
+        <div class="section-content">
+          <p>
+            AllenConnect is a <b>private social platform</b> exclusively for the
+            <b>Allenhouse community</b>. Whether you’re a current student, alumnus, or
+            professor, AllenConnect helps you:
+          </p>
+
+          <ul>
+            <li>Connect with fellow alumni and classmates</li>
+            <li>Stay updated on college events and announcements</li>
+            <li>Share achievements and opportunities</li>
+            <li>
+              Build a professional network rooted in trust and shared experience
+            </li>
+          </ul>
         </div>
       </section>
 
       <section class="app-screens" id="app-screens">
         <div class="section-header">
           <h2>App Screens</h2>
+        </div>
+        <div class="section-content">
+          <div class="screen-section">
+            <div class="screen-section-header">
+              <h3>Home Screens</h3>
+            </div>
+            <div class="screen-section-content">
+              <p>Here you can see all the posts and you can post something as well.</p>
+              <div class="screenshots">
+                <img src="Res/img/home_fragment.jpg" alt="" class="screenshot">
+                <img src="Res/img/home-frag2.jpg" alt="" class="screenshot">
+                <img src="Res/img/home-posts.jpg" alt="" class="screenshot">
+              </div>
+            </div>
+          </div>
+          <div class="screen-section">
+            <div class="screen-section-header">
+              <h3>Community Screens</h3>
+            </div>
+            <div class="screen-section-content">
+              <p>Here <b>all the users</b> of the app are listed with the <b>TABS</b> like Students, Alumni, Professor.</p>
+              <div class="screenshots">
+                <img src="Res/img/commuinity_student.jpg" alt="" class="screenshot">
+                <img src="Res/img/community_alumni.jpg" alt="" class="screenshot">
+                <img src="Res/img/community_prof.jpg" alt="" class="screenshot">
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -89,8 +115,6 @@
       </section>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
   </body>
 </html>

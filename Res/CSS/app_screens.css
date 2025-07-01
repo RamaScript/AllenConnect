@@ -1,0 +1,49 @@
+.section-content {
+  margin: 4rem;
+}
+
+.screen-section{
+    margin: 2rem 0;
+}
+
+.screen-section-header h3 {
+  width: fit-content;
+  padding: 1rem 6rem;
+  border-radius: 1rem 1rem 0 0;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  background: linear-gradient(
+    to bottom,
+    var(--glass-primary),
+    var(--glass-bg-2),
+    var(--glass-bg-2),
+    var(--glass-bg-2),
+    var(--glass-bg-2)
+  );
+  color: var(--color-secondary);
+}
+
+.screen-section-content{
+    background-color: var(--glass-bg-2);
+    border-radius: 1rem;
+    padding: 2rem 1rem 4rem 1rem;
+    box-shadow: inset 0px 0px 8px 0px var(--glass-secondary);
+}
+
+.screen-section-content p{
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.screenshots{
+    display: flex;
+    justify-content: space-around;
+}
+
+.screenshot{
+height: 32rem;
+border-radius: 1rem;
+box-shadow: 4px 4px 0.5rem ;
+}
