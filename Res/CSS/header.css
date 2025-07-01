@@ -30,6 +30,15 @@ header nav {
   padding-right: 1rem;
 }
 
+header nav .logo{
+  display: flex;
+  align-items: center;
+}
+
+header nav .logo img{
+  height: 3.6rem;
+}
+
 header nav h1 {
   font-size: 2rem;
   margin-left: 0.75rem;
