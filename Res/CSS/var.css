@@ -6,6 +6,7 @@
     /* Glass Colors */
     --glass-primary: rgba(54, 149, 255, 0.5);
     --glass-secondary: rgba(0, 255, 229, 0.5);
+    --glass-secondary2: rgba(0, 255, 229, 0.25);
     --glass-border: rgba(255, 255, 255, 0.3);
     --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     /* --glass-bg: rgba(255, 255, 255, 0.1); */
@@ -16,7 +17,7 @@
   
     /* Text */
     --text-main: #ffffff;
-    --text-secondary: #b0c4de;
+    --text-secondary: #ced9e7;
   
     /* Radius & Blur */
     --btn-radius:3rem;
