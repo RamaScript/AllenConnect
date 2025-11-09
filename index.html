@@ -3,9 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Allen Connect</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Allen Connect - Connect. Share. Grow.</title>
+    
+    <!-- Preconnect for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Optimized Font Awesome - only load what's needed -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" media="print" onload="this.media='all'" />
+    
     <link rel="icon" href="Res/img/logo/cropped-Broach.png" />
+    
+    <!-- CSS Files -->
     <link rel="stylesheet" href="Res/CSS/var.css" />
     <link rel="stylesheet" href="Res/CSS/common.css" />
     <link rel="stylesheet" href="Res/CSS/header.css" />
@@ -14,73 +23,149 @@
     <link rel="stylesheet" href="Res/CSS/about.css" />
     <link rel="stylesheet" href="Res/CSS/app_screens.css" />
     <link rel="stylesheet" href="Res/CSS/hire-me.css" />
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="AllenConnect - The exclusive social platform for Allenhouse students, alumni, and professors.">
+    <meta name="theme-color" content="#3695ff">
   </head>
   <body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+
     <header>
       <nav>
         <div class="logo">
-          <img src="Res/img/logo/cropped-Broach.png" alt="Logo" class="logo" />
+          <img src="Res/img/logo/cropped-Broach.png" alt="Allen Connect Logo" class="logo" loading="lazy" />
           <h1>Allen Connect</h1>
         </div>
         <ul>
-          <a href="#home"> <li>Home</li></a>
-          <a href="#about"> <li>About</li></a>
-
-          <a href="#app-screens"> <li>App Screens</li></a>
-          <a href="#hire-me"> <li>Hire me</li></a>
+          <a href="#home"> <li class="nav-item">Home</li></a>
+          <a href="#about"> <li class="nav-item">About</li></a>
+          <a href="#app-screens"> <li class="nav-item">App Screens</li></a>
+          <a href="#hire-me"> <li class="nav-item">Hire me</li></a>
         </ul>
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
       </nav>
     </header>
 
     <main>
       <section class="home" id="home">
         <div class="left">
-          <img src="Res/img/splash.jpg" alt="" />
+          <div class="phone-mockup">
+            <img src="Res/img/splash.jpg" alt="Allen Connect App Interface" loading="eager" />
+          </div>
         </div>
         <div class="right">
-          <h1>Allen Connect</h1>
-
-          <p>
+          <h1 class="hero-title">
+            <span class="title-line">Allen</span>
+            <span class="title-line">Connect</span>
+          </h1>
+          <p class="hero-subtitle">
             AllenConnect brings <b>Students</b>, <b>Alumni</b>, and
             <b>Professors</b> of Allenhouse under one digital roof —
             <b>to share knowledge, opportunities, and memories.</b>
           </p>
 
           <div class="home-btns">
-            <button class="download-app-btn btn">Download App</button>
-            <a href="https://ramascript.github.io/" target="_blank"
-              ><button class="meet-the-dev-btn btn">Meet Dev.</button></a
-            >
+            <button class="download-app-btn btn btn-primary">
+              <i class="fab fa-google-play"></i>
+              Download App
+            </button>
+            <a href="https://ramascript.github.io/" target="_blank">
+              <button class="meet-the-dev-btn btn btn-secondary">
+                <i class="fas fa-code"></i>
+                Meet Developer
+              </button>
+            </a>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-item">
+              <div class="stat-number" data-target="100">0</div>
+              <div class="stat-label">Active Users</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="200">0</div>
+              <div class="stat-label">Alumni Network</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="50">0</div>
+              <div class="stat-label">Professors</div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="about" id="about">
         <div class="section-header">
-          <h2>About</h2>
+          <h2>
+            <span class="section-icon"><i class="fas fa-info-circle"></i></span>
+            About AllenConnect
+          </h2>
         </div>
 
         <div class="section-content">
-          <p>
-            AllenConnect is a <b>private social platform</b> exclusively for the
-            <b>Allenhouse community</b>. Whether you’re a current student,
-            alumnus, or professor, AllenConnect helps you:
-          </p>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                AllenConnect is a <b>private social platform</b> exclusively for the
+                <b>Allenhouse community</b>. Whether you're a current student,
+                alumnus, or professor, AllenConnect helps you:
+              </p>
 
-          <ul>
-            <li>Connect with fellow alumni and classmates</li>
-            <li>Stay updated on college events and announcements</li>
-            <li>Share achievements and opportunities</li>
-            <li>
-              Build a professional network rooted in trust and shared experience
-            </li>
-          </ul>
+              <ul class="feature-list">
+                <li>
+                  <i class="fas fa-users"></i>
+                  <span>Connect with fellow alumni and classmates</span>
+                </li>
+                <li>
+                  <i class="fas fa-bell"></i>
+                  <span>Stay updated on college events and announcements</span>
+                </li>
+                <li>
+                  <i class="fas fa-trophy"></i>
+                  <span>Share achievements and opportunities</span>
+                </li>
+                <li>
+                  <i class="fas fa-network-wired"></i>
+                  <span>Build a professional network rooted in trust and shared experience</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="about-visual">
+              <div class="feature-card" style="--delay: 0s">
+                <i class="fas fa-user-graduate"></i>
+                <h3>Students</h3>
+                <p>Connect and learn</p>
+              </div>
+              <div class="feature-card" style="--delay: 0.1s">
+                <i class="fas fa-user-tie"></i>
+                <h3>Alumni</h3>
+                <p>Share & mentor</p>
+              </div>
+              <div class="feature-card" style="--delay: 0.2s">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Professors</h3>
+                <p>Guide & inspire</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="app-screens" id="app-screens">
         <div class="section-header">
-          <h2>App Screens</h2>
+          <h2>
+            <span class="section-icon"><i class="fas fa-mobile-alt"></i></span>
+            App Screens
+          </h2>
         </div>
         <div class="section-content">
           <div class="screen-section">
@@ -95,15 +180,32 @@
               <div class="screenshots">
                 <img
                   src="Res/img/home_fragment.jpg"
-                  alt=""
+                  alt="Home Fragment"
                   class="screenshot"
+                  loading="lazy"
                 />
-                <img src="Res/img/home-frag2.jpg" alt="" class="screenshot" />
-                <img src="Res/img/home-posts.jpg" alt="" class="screenshot" />
-                <img src="Res/img/comment.jpg" alt="" class="screenshot" />
+                <img
+                  src="Res/img/home-frag2.jpg"
+                  alt="Home Fragment 2"
+                  class="screenshot"
+                  loading="lazy"
+                />
+                <img
+                  src="Res/img/home-posts.jpg"
+                  alt="Home Posts"
+                  class="screenshot"
+                  loading="lazy"
+                />
+                <img
+                  src="Res/img/comment.jpg"
+                  alt="Comments"
+                  class="screenshot"
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
+
           <div class="screen-section">
             <div class="screen-section-header">
               <h3>Community Screens</h3>
@@ -116,18 +218,21 @@
               <div class="screenshots">
                 <img
                   src="Res/img/commuinity_student.jpg"
-                  alt=""
+                  alt="Community Students"
                   class="screenshot"
+                  loading="lazy"
                 />
                 <img
                   src="Res/img/community_alumni.jpg"
-                  alt=""
+                  alt="Community Alumni"
                   class="screenshot"
+                  loading="lazy"
                 />
                 <img
                   src="Res/img/community_prof.jpg"
-                  alt=""
+                  alt="Community Professors"
                   class="screenshot"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -146,16 +251,23 @@
               </p>
 
               <div class="screenshots">
-                <img src="Res/img/create_post.jpg" alt="" class="screenshot" />
+                <img
+                  src="Res/img/create_post.jpg"
+                  alt="Create Post"
+                  class="screenshot"
+                  loading="lazy"
+                />
                 <img
                   src="Res/img/community_alumni.jpg"
-                  alt=""
+                  alt="Alumni View"
                   class="screenshot"
+                  loading="lazy"
                 />
                 <img
                   src="Res/img/community_prof.jpg"
-                  alt=""
+                  alt="Professor View"
                   class="screenshot"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -165,7 +277,10 @@
 
       <section class="hire-me" id="hire-me">
         <div class="section-header">
-          <h2>Hire Me</h2>
+          <h2>
+            <span class="section-icon"><i class="fas fa-handshake"></i></span>
+            Let's Work Together
+          </h2>
         </div>
         <div class="section-content">
           <div class="left">
@@ -195,17 +310,16 @@
                 <p>Nuaon, Buxar, Bihar, India PIN - 802123</p>
               </div>
             </div>
-           
           </div>
           <div class="right">
             <p>Message Me</p>
-            <form >
+            <form id="contact-form">
               <div class="name-email-box">
-                <input type="text" placeholder="Name" id="name">
-                <input type="email" placeholder="Email" id="email">
+                <input type="text" placeholder="Name" id="name" required />
+                <input type="email" placeholder="Email" id="email" required />
               </div>
-              <input type="text" placeholder="Subject" id="subject">
-              <input type="text" placeholder="Message" id="message">
+              <input type="text" placeholder="Subject" id="subject" required />
+              <input type="text" placeholder="Message" id="message" required />
 
               <button type="submit">Send Message</button>
             </form>
@@ -219,35 +333,47 @@
         <div class="footer-section">
           <h3>AllenConnect</h3>
           <p>© 2025 AllenConnect. All rights reserved.</p>
-          <p>Made by <a style="color: var(--color-secondary); font-family: monospace; font-size: 1.25rem;" href="https://ramascript.github.io/">@Ramanand</a></p>
+          <p>
+            Made with <i class="fas fa-heart"></i> by
+            <a href="https://ramascript.github.io/">@Ramanand</a>
+          </p>
         </div>
-    
+
         <div class="footer-section">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#app-screens">App Screens</a></li>
-            <li><a href="#hire-me">Hire Me</a></li>
+            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="#app-screens"><i class="fas fa-mobile-alt"></i> App Screens</a></li>
+            <li><a href="#hire-me"><i class="fas fa-handshake"></i> Hire Me</a></li>
           </ul>
         </div>
-    
+
         <div class="footer-section">
           <h4>Legal</h4>
           <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+            <li><a href="#"><i class="fas fa-file-contract"></i> Terms & Conditions</a></li>
           </ul>
         </div>
-    
+
         <div class="footer-section">
           <h4>Contact</h4>
-          <p>Email: <a href="mailto:support@allenconnect.com">support@allenconnect.com</a></p>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:ramanand.in7@gmail.com">ramanand.in7@gmail.com</a>
+          </p>
           <h4>Download</h4>
-          <p><a href="#">Get the official AllenConnect app on Google Play</a></p>
+          <p>
+            <a href="#" class="download-link">
+              <i class="fab fa-google-play"></i>
+              Get on Google Play
+            </a>
+          </p>
         </div>
       </div>
     </footer>
-    
-      </body>
+
+    <script src="Res/JS/main.js"></script>
+  </body>
 </html>

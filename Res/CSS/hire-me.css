@@ -2,11 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: var(--spacing-lg) var(--spacing-md);
 }
 
 .hire-me .section-content .left {
   flex: 1;
-  padding-right: 2rem;
+  padding-right: var(--spacing-lg);
 }
 
 .hire-me .section-content .left > p {
@@ -14,7 +15,7 @@
   text-align: justify;
 }
 
-.hire-me .section-content .left .info-card {
+.info-card {
   display: flex;
   margin: 1.5rem 0;
   align-items: center;
@@ -32,26 +33,24 @@
   -webkit-text-fill-color: transparent;
 }
 
-.hire-me .section-content .left .info-card .info-card-data {
+.info-card-data {
   margin-left: 1.5rem;
 }
 
 .hire-me .section-content .left .info-card .info-card-data p:nth-child(2n-1) {
-  /* color: rebeccapurple; */
   font-size: 1rem;
   font-weight: 500;
 }
 
 .hire-me .section-content .left .info-card .info-card-data p:nth-child(2n) {
-  /* color: red; */
-  font-size: 1;
+  font-size: 1rem;
   font-weight: 300;
   color: var(--text-secondary);
 }
 
 .hire-me .section-content .right {
   flex: 1;
-  padding-left: 2rem;
+  padding-left: var(--spacing-lg);
 }
 
 .hire-me .section-content .right > p {
@@ -70,13 +69,14 @@
 .hire-me .section-content .right form {
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-top: var(--spacing-lg);
 }
 
 .hire-me .section-content .right form .name-email-box {
   display: flex;
   flex-direction: row;
 }
+
 .hire-me .section-content .right form .name-email-box #name {
   flex: 1;
   margin-right: 0.5rem;
@@ -97,10 +97,9 @@
   font-size: 1rem;
 }
 
-.hire-me .section-content .right form input:focus{
-    border: 2px solid var(--glass-secondary);
-    outline: none;
-
+.hire-me .section-content .right form input:focus {
+  border: 2px solid var(--glass-secondary);
+  outline: none;
 }
 
 .hire-me .section-content .right button {
@@ -110,8 +109,8 @@
     var(--glass-secondary),
     var(--glass-primary)
   );
-  background-size: 200% auto; /* make background twice as wide horizontally */
-  background-position: left center; /* start from left */
+  background-size: 200% auto;
+  background-position: left center;
   color: white;
   padding: 0.75rem 1rem;
   margin-top: 1.5rem;
@@ -126,12 +125,49 @@
 
 .hire-me .section-content .right button:hover {
   transition: 0.3s;
-  background-position: right center; /* animate to right on hover */
-  /* box-shadow: 0px 0px 8px 0px var(--color-primary); */
+  background-position: right center;
   transform: scale(0.99);
 }
 
 .hire-me .section-content .right button:focus {
   outline: 1px solid var(--glass-primary);
   outline-offset: 1px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .hire-me .section-content {
+    flex-direction: column;
+  }
+
+  .hire-me .section-content .left,
+  .hire-me .section-content .right {
+    padding: 0;
+    margin: var(--spacing-md) 0;
+  }
+
+  .hire-me .section-content .right form .name-email-box {
+    flex-direction: column;
+  }
+
+  .hire-me .section-content .right form .name-email-box #name,
+  .hire-me .section-content .right form .name-email-box #email {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-card-data {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .info-card-data p:nth-child(2) {
+    word-break: break-word;
+  }
 }

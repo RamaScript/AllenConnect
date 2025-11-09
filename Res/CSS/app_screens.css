@@ -1,17 +1,23 @@
-.section-content {
-  margin: 4rem;
+.app-screens .section-content {
+  margin: var(--spacing-lg) var(--spacing-md);
+  animation: fadeInUp 0.8s ease;
 }
 
-.screen-section{
-    margin: 2rem 0;
+.screen-section {
+  margin: var(--spacing-lg) 0;
+}
+
+.screen-section-header {
+  display: flex;
+  justify-content: center;
 }
 
 .screen-section-header h3 {
   width: fit-content;
-  padding: 1rem 6rem;
-  border-radius: 1rem 1rem 0 0;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   margin: 0 auto;
   background: linear-gradient(
     to bottom,
@@ -24,26 +30,54 @@
   color: var(--color-secondary);
 }
 
-.screen-section-content{
-    background-color: var(--glass-bg-2);
-    border-radius: 1rem;
-    padding: 2rem 1rem 4rem 1rem;
-    box-shadow: inset 0px 0px 8px 0px var(--glass-secondary);
+.screen-section-content {
+  background-color: var(--glass-bg-2);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xl);
+  box-shadow: inset 0px 0px 8px 0px var(--glass-secondary);
 }
 
-.screen-section-content p{
-    font-size: 1.25rem;
-    text-align: center;
-    margin-bottom: 2rem;
+.screen-section-content p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
 }
 
-.screenshots{
-    display: flex;
-    justify-content: space-around;
+.screenshots {
+  display: flex;
+  justify-content: space-around;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
 }
 
-.screenshot{
-height: 32rem;
-border-radius: 1rem;
-box-shadow: 4px 4px 0.5rem ;
+.screenshot {
+  height: 32rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 4px 4px 0.5rem;
+  transition: transform var(--transition-base);
+}
+
+.screenshot:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .screenshots {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .screenshot {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .screenshot {
+    max-height: 400px;
+  }
 }

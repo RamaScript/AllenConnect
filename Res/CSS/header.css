@@ -1,71 +1,204 @@
 header {
-  border-radius: var(--radius-lg);
-  background: linear-gradient(
-    to right,
-    var(--glass-primary),
-    var(--glass-secondary)
-  );
+  border-radius: var(--radius-xl);
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(var(--blur-amount));
+  -webkit-backdrop-filter: blur(var(--blur-amount-safari));
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: auto;
-  margin-top: 1rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  margin-bottom: 1rem;
-  backdrop-filter: blur(var(--blur-amount));
-  -webkit-backdrop-filter: blur(var(--blur-amount-safari)); /* for Safari */
+  margin: 1rem 1.5rem;
   border: 1px solid var(--glass-border);
-  z-index: 1000;
-  box-shadow: var(--glass-shadow);
+  z-index: var(--z-fixed);
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+  animation: fadeInDown 0.5s ease;
+}
+
+header:hover {
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+  border-color: var(--color-primary);
 }
 
 header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  height: 4.5rem;
+  padding: 0 2rem;
+  position: relative;
 }
 
-header nav .logo{
+header nav .logo {
   display: flex;
   align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  transition: all var(--transition-base);
 }
 
-header nav .logo img{
+header nav .logo:hover {
+  transform: scale(1.05);
+}
+
+header nav .logo img {
   height: 3.6rem;
+  filter: drop-shadow(0 0 10px var(--color-primary));
+  transition: all var(--transition-base);
+  animation: pulse 3s ease infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px var(--color-primary));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--color-secondary));
+  }
 }
 
 header nav h1 {
-  font-size: 2rem;
-  margin-left: 0.75rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 header nav ul {
   display: flex;
   list-style: none;
+  gap: var(--spacing-sm);
 }
 
 header nav ul a {
   text-decoration: none;
+  position: relative;
 }
 
 header nav ul a li {
-  margin: 1.5rem;
-  padding-bottom: 0.5rem;
-  padding-top: 0.5rem;
+  padding: var(--spacing-xs) var(--spacing-md);
   color: var(--text-main);
-  border-top: 0.25rem dotted transparent;
-  border-bottom: 0.25rem dotted transparent; /* define width, style, color initially */
-  transition: 0.3s;
+  font-weight: 500;
+  position: relative;
+  transition: all var(--transition-base);
+  border-radius: var(--radius-md);
+}
+
+header nav ul a li::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  transform: translateX(-50%);
+  transition: width var(--transition-base);
+}
+
+header nav ul a li:hover::before {
+  width: 80%;
 }
 
 header nav ul a li:hover {
-  cursor: pointer;
-  border-bottom-color: var(--color-secondary); /* change only color on hover */
-  transition: 0.3s;
   color: var(--color-secondary);
+  background: var(--glass-card);
+  transform: translateY(-2px);
+}
+
+header nav ul a li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary);
+  opacity: 0;
+  border-radius: var(--radius-md);
+  transition: opacity var(--transition-base);
+  z-index: -1;
+}
+
+header nav ul a li:hover::after {
+  opacity: 0.1;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+  color: var(--color-secondary);
+  transition: all var(--transition-base);
+}
+
+.mobile-menu-toggle:hover {
+  transform: rotate(90deg);
+  color: var(--color-primary);
+}
+
+/* Scroll Effect */
+header.scrolled {
+  margin: 0.5rem 1rem;
+  box-shadow: var(--shadow-xl);
+  background: rgba(10, 10, 15, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header nav {
+    padding: 0 1rem;
+  }
+
+  header nav h1 {
+    font-size: 1.25rem;
+  }
+
+  header nav ul {
+    position: fixed;
+    top: 5.5rem;
+    right: 1.5rem;
+    flex-direction: column;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(var(--blur-amount));
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    gap: var(--spacing-xs);
+    transform: translateX(120%);
+    transition: transform var(--transition-base);
+    box-shadow: var(--shadow-xl);
+  }
+
+  header nav ul.active {
+    transform: translateX(0);
+  }
+
+  header nav ul a li {
+    width: 200px;
+    text-align: center;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    margin: 0.5rem;
+  }
+
+  header nav .logo img {
+    height: 2.8rem;
+  }
+
+  header nav h1 {
+    font-size: 1rem;
+  }
 }
